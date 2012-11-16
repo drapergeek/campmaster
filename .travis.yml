@@ -1,6 +1,22 @@
 language: ruby
 rvm:
   - "1.9.3"
+env:
+  global:
+    - secure: "N8jyo0tJed2uNDeBzw0IwhmUq2Su+VpqLnUpIXQUQJ1t0We8QKwnanUU2j0K\n71VMeBaQw3+qB7pN9tJjEEzBfn9vB2Zc6+/c9g0UT1ma+98RjunkHj4U0p1u\nBt+G0TVttD5hyxhXmlp0Om2PNEx05+M5tZm3GHvt5LanRJhdajw="
 before_script:
   - psql -c 'create database campmaster_test;' -U postgres
   - bundle exec rake db:migrate db:test:prepare
+notifications:
+  campfire:
+    rooms:
+      - secure: "bL1NdMdIX88m8OcUqR0UA/8OJw5nqDCBJqCmox/PnlvEcxtKDjNvQqcvnT02\nvMCEznwrewYcG1OaoKMWEqytV0tJcmP5wsn5vdhrkJ9tyeqK1tcZ8Gr403w3\nqIX0YFQpdfY7feAmPLc2P/b8DHuTgoh7/CFHZfLVfc5gKId4x/E="
+  email:
+    on_success: change
+    on_failure: always
+after_script:
+  - gem install heroku
+  - yes | ruby lib/travis_deployer.rb
+  - yes | heroku keys:add
+  - git push heroku master
+  - heroku run rake db:migrate -a campmaster-string
