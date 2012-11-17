@@ -9,6 +9,7 @@ gem 'clearance'
 gem 'thin'
 gem 'simple_form'
 gem 'bourbon'
+gem 'flutie'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
