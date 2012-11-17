@@ -12,5 +12,9 @@ namespace :dev do
     DatabaseCleaner.clean
 
     puts "Creating development data..."
+
+    puts "***USERS***"
+    user = FactoryGirl.create(:user, email: 'user@example.com', password: 'test')
+    puts "User: #{user.email}/#{user.password}"
   end
 end

@@ -1,0 +1,11 @@
+<h2><%= t "devise.invitations.new.header" %></h2>
+
+<%= simple_form_for resource, :as => resource_name, :url => invitation_path(resource_name), :html => {:method => :post} do |f| %>
+  <%= devise_error_messages! %>
+
+  <%= f.input :name %>
+  <%= f.input :email %>
+  <%= f.input :role %>
+
+<%= f.submit t("devise.invitations.new.submit_button") %>
+<% end %>

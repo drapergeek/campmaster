@@ -5,11 +5,15 @@ ruby '1.9.3'
 gem 'rails', '3.2.8'
 gem 'pg'
 gem 'jquery-rails'
-gem 'clearance'
 gem 'thin'
 gem 'simple_form'
 gem 'bourbon'
 gem 'flutie'
+gem 'devise'
+gem 'devise_invitable'
+gem 'high_voltage'
+gem 'strong_parameters'
+gem 'pry'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -30,6 +34,7 @@ group :development, :test do
 end
 
 group :test do
+  gem 'email_spec'
   gem 'capybara'
   gem 'capybara-webkit'
   gem 'factory_girl_rails'

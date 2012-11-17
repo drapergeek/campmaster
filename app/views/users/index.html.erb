@@ -1,0 +1,13 @@
+<table class="table table-striped">
+  <tr>
+    <th>Email</th>
+    <th>Role</th>
+  </tr>
+  <% @users.each do |user| %>
+    <tr>
+      <td><%= user.email %></td>
+      <td><%= user.role %></td>
+    </tr>
+  <% end %>
+</table>
+<%= link_to "Invite New User", new_user_invitation_path %>
