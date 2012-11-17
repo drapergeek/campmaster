@@ -33,6 +33,7 @@ GEM
       builder
       girl_friday
     arel (3.0.2)
+    bootstrap-sass (2.1.1.0)
     bourbon (2.1.2)
       sass (>= 3.2)
       thor
@@ -222,6 +223,7 @@ PLATFORMS
 
 DEPENDENCIES
   airbrake
+  bootstrap-sass (~> 2.1.1.0)
   bourbon
   bourne
   capybara

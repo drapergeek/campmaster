@@ -1,22 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8" />
-  <meta name="ROBOTS" content="NOODP" />
-  <title><%= page_title %></title>
-  <%= stylesheet_link_tag :application, :media => 'all' %>
-  <%= csrf_meta_tags %>
+<meta charset="utf-8" />
+<meta name="ROBOTS" content="NOODP" />
+<title><%= page_title %></title>
+<%= stylesheet_link_tag :application, :media => 'all' %>
+<%= csrf_meta_tags %>
 </head>
 <body class="<%= body_class %>">
-  <header>
-    <% if signed_in? -%>
-      <%= link_to "Sign out", sign_out_path, :method => :delete %>
-    <% else -%>
-      <%= link_to "Sign in", sign_in_path %>
-    <% end -%>
-  </header>
-  <%= render 'flashes' -%>
-  <%= yield %>
+<div class="container-fluid">
+  <div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <%= link_to "Campmaster", root_url, class: 'brand' %>
+        <div class="nav-collapse">
+          <ul class="nav">
+            <li class="active"><a href="#">Not Yet</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+    <div class="row">
+      <div class="span8 offset2">
+        <%= render 'flashes' -%>
+      </div>
+    </div>
+    <div class="row">
+      <div class="span8 offset2">
+        <%= yield %>
+      </div>
+    </div>
+  </div>
   <%= render 'javascript' %>
-</body>
-</html>
+  </body>
+  </html>
