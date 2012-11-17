@@ -19,4 +19,4 @@ after_script:
   - yes | ruby lib/travis_deployer.rb
   - yes | heroku keys:add
   - git push heroku master
-  - heroku run rake db:migrate -a campmaster-string
+  - heroku run rake db:migrate -a campmaster-staging
