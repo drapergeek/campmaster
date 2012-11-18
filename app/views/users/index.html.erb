@@ -6,10 +6,16 @@
     <th>Role</th>
   </tr>
   <% @users.each do |user| %>
-    <tr>
+    <tr id="<%= user.id %>">
       <td><%= user.name %></td>
       <td><%= user.email %></td>
       <td><%= user.role %></td>
+      <td>
+        <%= link_to "Delete User",
+          user,
+          method: :delete,
+          confirm: "Are you sure?",
+          class: "btn btn-danger btn-mini"  %>
     </tr>
   <% end %>
 </table>

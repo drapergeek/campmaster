@@ -16,6 +16,18 @@ feature 'user management' do
     ensure_new_user_is_signed_in
   end
 
+  scenario 'delete a user' do
+    sign_in_as_admin
+    user = create(:user, name: "Bruce Wayne")
+    visit users_path
+    page.should have_content "Bruce Wayne"
+    within "##{user.id}" do
+      click_link "Delete User"
+    end
+    page.should have_content "User deleted"
+    page.should_not have_content "Bruce Wayne"
+  end
+
   def ensure_new_user_is_signed_in
     page.should have_content("You are now signed in")
   end
