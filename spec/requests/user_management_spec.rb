@@ -47,6 +47,7 @@ feature 'user management' do
     users.each do |user|
       page.should have_content user.email
       page.should have_content user.role
+      page.should have_content user.name
     end
   end
 end

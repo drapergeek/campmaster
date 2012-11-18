@@ -1,13 +1,16 @@
+<h1>All Users</h1>
 <table class="table table-striped">
   <tr>
+    <th>Name</th>
     <th>Email</th>
     <th>Role</th>
   </tr>
   <% @users.each do |user| %>
     <tr>
+      <td><%= user.name %></td>
       <td><%= user.email %></td>
       <td><%= user.role %></td>
     </tr>
   <% end %>
 </table>
-<%= link_to "Invite New User", new_user_invitation_path %>
+<%= link_to "Invite New User", new_user_invitation_path, class: "btn" %>
