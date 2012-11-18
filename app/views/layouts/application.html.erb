@@ -15,10 +15,10 @@
         <%= link_to "Campmaster", root_url, class: 'brand' %>
         <div class="nav-collapse">
           <ul class="nav">
-            <li><%= link_to 'Users', users_path %></li>
-            <% if signed_in? %>
-              <li><%= link_to 'Sign out', destroy_user_session_path, method: :delete %></li>
-            <% end %>
+            <%= render 'layouts/navigation' %>
+          </ul>
+          <ul class="nav pull-right">
+            <%= render 'layouts/user_navigation' %>
           </ul>
         </div><!--/.nav-collapse -->
       </div>

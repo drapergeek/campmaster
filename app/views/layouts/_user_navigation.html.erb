@@ -1,0 +1,11 @@
+<% if signed_in? %>
+  <li class="dropdown pull-right">
+    <%= link_to nil, {class: "dropdown-toggle", "data-toggle" => "dropdown"} do %>
+      <%= current_user.email %>
+      <b class="caret"></b>
+    <% end %>
+    <ul class="dropdown-menu pull-right">
+      <li><%= link_to 'Sign out', destroy_user_session_path, method: :delete %></li>
+    </ul>
+  </li>
+<% end %>
