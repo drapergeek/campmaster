@@ -31,6 +31,7 @@ group :development, :test do
   gem 'guard-spork'
   gem 'rspec-rails'
   gem 'sham_rack'
+  gem 'faker'
 end
 
 group :test do
