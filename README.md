@@ -1,5 +1,7 @@
 Campmaster
 ============================
+[![Build Status](https://secure.travis-ci.org/drapergeek/campmaster.png?master)](https://travis-ci.org/drapergeek/campmaster) [![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/drapergeek/campmaster)
+
 Project setup
 -------------
 
