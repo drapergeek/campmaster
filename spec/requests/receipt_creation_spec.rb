@@ -6,7 +6,8 @@ feature 'user creates a receipt' do
   end
 
   scenario 'new receipt with only required fields' do
-    visit new_receipt_path
+    click_link "Receipts"
+    click_link "Add New Receipt"
     receipt = create(:receipt)
     fill_in_required_fields_with_information(receipt)
     verify_flash_for_receipt(receipt)

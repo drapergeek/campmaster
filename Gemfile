@@ -16,6 +16,7 @@ gem 'strong_parameters'
 gem 'pry'
 gem 'launchy'
 gem 'kaminari'
+gem 'kaminari-bootstrap'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
