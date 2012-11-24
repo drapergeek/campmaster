@@ -1,0 +1,12 @@
+<h1>New Receipt</h1>
+<%= simple_form_for(@receipt) do |form| %>
+  <%= form.input :first_name %>
+  <%= form.input :last_name %>
+  <%= form.input :email %>
+  <%= form.input :phone %>
+  <%= form.input :address %>
+  <%= form.input :city %>
+  <%= form.input :state, collection: State.all %>
+  <%= form.input :zip %>
+  <%= form.submit %>
+<% end %>
