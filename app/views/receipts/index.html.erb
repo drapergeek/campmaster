@@ -1,0 +1,11 @@
+<h1>Receipts</h1>
+<table class="table table-striped">
+  <tr>
+    <th>Name</th>
+  </tr>
+  <% @receipts.each do |receipt| %>
+    <tr id="<%= receipt.id %>">
+      <td><%= receipt.name %></td>
+    </tr>
+  <% end %>
+</table>
