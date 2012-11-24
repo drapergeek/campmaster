@@ -15,6 +15,7 @@ gem 'high_voltage'
 gem 'strong_parameters'
 gem 'pry'
 gem 'launchy'
+gem 'kaminari'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

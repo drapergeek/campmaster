@@ -1,7 +1,7 @@
 class ReceiptsController < ApplicationController
 
   def index
-    @receipts = Receipt.all
+    @receipts = Receipt.order("created_at DESC").page(params[:page])
   end
 
   def new

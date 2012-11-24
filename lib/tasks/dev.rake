@@ -17,8 +17,10 @@ namespace :dev do
     puts "***USERS***"
     user = create(:user, email: 'user@example.com', password: 'test')
     puts "User: #{user.email}/#{user.password}"
-    5.times do
-      create(:random_user)
-    end
+    puts "***********"
+
+    create_list(:random_user, 5)
+    create_list(:random_receipt, 50)
+
   end
 end
