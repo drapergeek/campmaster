@@ -20,6 +20,10 @@ class ReceiptsController < ApplicationController
     end
   end
 
+  def show
+    @receipt = Receipt.find(params[:id])
+  end
+
   private
 
   def receipt_params

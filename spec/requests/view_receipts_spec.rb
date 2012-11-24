@@ -25,4 +25,23 @@ feature 'View receipts' do
     click_link "Next >"
     page.should have_content first_receipt.name
   end
+
+  scenario 'view an individual receipt' do
+    receipt = create(:full_receipt)
+    click_link "Receipts"
+    within "tr#receipt-#{receipt.id}" do
+      click_link "View"
+    end
+    verify_page_has_all_receipt_information(receipt)
+  end
+
+  def verify_page_has_all_receipt_information(receipt)
+    page.should have_content receipt.name
+    page.should have_content receipt.email
+    page.should have_content receipt.phone
+    page.should have_content receipt.address
+    page.should have_content receipt.city
+    page.should have_content receipt.state
+    page.should have_content receipt.zip
+  end
 end

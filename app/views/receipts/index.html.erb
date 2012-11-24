@@ -1,13 +1,14 @@
 <h1 class='inline-header'>Receipts</h1>
-<%= link_to "Add New Receipt", new_receipt_path, class: "btn pull-right" %>
+<%= link_to "Add New Receipt", new_receipt_path, class: "btn btn-info pull-right" %>
 
 <table class="table table-striped">
   <tr>
     <th>Name</th>
   </tr>
   <% @receipts.each do |receipt| %>
-    <tr id="<%= receipt.id %>">
+    <tr id="receipt-<%= receipt.id %>">
       <td><%= receipt.name %></td>
+      <td><%= link_to "View", receipt, class: "btn"%></td>
     </tr>
   <% end %>
 </table>
