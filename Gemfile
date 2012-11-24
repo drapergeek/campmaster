@@ -14,6 +14,7 @@ gem 'devise_invitable'
 gem 'high_voltage'
 gem 'strong_parameters'
 gem 'pry'
+gem 'launchy'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
