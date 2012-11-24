@@ -7,7 +7,7 @@ Project setup
 
 Get the code.
 
-    git clone git@github.com:drapergeek/wuzup.git
+    git clone git@github.com:drapergeek/campmaster.git
 
 Set up the project's dependencies.
 
